@@ -56,10 +56,15 @@ public class CourseController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    //
+    // @GetMapping("/health")
+    // public String healthCheck() {
+    //     return "UP and UP";
+    // }
 
-    @GetMapping("/health")
+    @GetMapping("/healthand")
     public String healthCheck() {
-        return "UP";
+        return "UP and UP";
     }
 
 
