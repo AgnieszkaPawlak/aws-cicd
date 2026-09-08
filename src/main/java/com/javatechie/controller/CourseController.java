@@ -57,7 +57,6 @@ public class CourseController {
         }
     }
 
-    
     // @GetMapping("/health")
     // public String healthCheck() {
     //     return "UP and UP";
