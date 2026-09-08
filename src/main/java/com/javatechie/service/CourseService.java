@@ -10,17 +10,20 @@ import java.util.Optional;
 @Service
 public class CourseService {
 
-    //RDS DB
     private final List<Course> courses = new ArrayList<>();
 
-    // Create a new course
+    public CourseService() {
+        courses.add(new Course(1, "Java Fundamentals", 199.0));
+        courses.add(new Course(2, "Spring Boot", 249.0));
+        courses.add(new Course(3, "AWS CI/CD", 299.0));
+    }
+
     public void addCourse(Course course) {
         courses.add(course);
     }
 
-    // Retrieve all courses
     public List<Course> getAllCourses() {
-        return courses;
+        return List.copyOf(courses);
     }
 
     // Retrieve a course by id
